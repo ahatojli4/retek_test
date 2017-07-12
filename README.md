@@ -11,13 +11,13 @@ PHP70 compiling with ZTS mode. Used [pthread](http://php.net/manual/en/book.pthr
 **Usage examples:**
 
 <pre><code>php wordsCounter.php
-Need a path for file or dir.</code></pre>
+Need a path to file or dir.</code></pre>
 
 <pre><code>php wordsCounter.php test
-Numbers of words: 6</code></pre>
+Number of words: 6</code></pre>
 
 <pre><code>php wordsCounter.php test asdf
 Only first argument is used.
-Numbers of words: 6</code></pre>
+Number of words: 6</code></pre>
 
 for mac: `brew install homebrew/php/php70-pthreads`

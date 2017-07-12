@@ -59,8 +59,8 @@ class ThreadWordCounter extends Thread
 }
 
 if ($argc === 1) {
-	echo "Need a path for file or dir.\n";
-	die;
+	echo "Need a path to file or dir.\n";
+	die();
 } elseif ($argc > 2) {
 	echo "Only first argument is used.\n";
 }
@@ -69,6 +69,7 @@ if ($argc === 1) {
 list(, $filePath) = $argv;
 if (!file_exists($filePath)) {
 	echo "Wrong path!\n";
+	die();
 }
 
 $recursiveII = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($filePath), RecursiveIteratorIterator::SELF_FIRST);
@@ -94,4 +95,4 @@ foreach ($wordCounterObjects as $object) {
 	$numberOfWords += $object->getNumberOfWords();
 }
 
-echo "Numbers of words: " . $numberOfWords . "\n";
+echo "Number of words: " . $numberOfWords . "\n";
